@@ -22,6 +22,9 @@ app.use("/appointments", Appointment);
 app.use("/departments", Departments);
 app.use("/uploads",express.static("uploads"))
 
+app.get("/", (req, res) => {
+  res.send("Doctor Appointment API is running");
+});
 app.listen(PORT , ()=>{
     console.log(`server is running on port ${PORT}`)
 })
