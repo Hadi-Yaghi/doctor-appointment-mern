@@ -1,4 +1,4 @@
-import React, { act, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Departments() {
   const [departments, setDepartments] = useState([]);

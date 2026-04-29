@@ -7,7 +7,7 @@ function Doctors() {
     useEffect(()=>{
         const fetchedDoctors = async()=>{
             try {
-                const res = await fetch("http://localhost:5000/doctors/allDoctors")
+                const res = await fetch("https://doctor-appointment-mern-xqjc.onrender.com/doctors/allDoctors")
                 const data = await res.json()
                 if(!res.ok) throw new Error(data.message || "Failed to fetch doctors")
                     setDoctors(data.slice(0,3))
@@ -25,7 +25,11 @@ function Doctors() {
                 {doctors?.map((doc)=>(
                     <div className="bg-white rounded-lg shadow p-4 text-center" key={doc?._id}>
                         <Link to={`/doctor/${doc?._id}`}>
-                        <img  className="w-32 h-32 mx-auto rounded-full object-cover border mb-4" src={`http://localhost:5000/uploads/${doc?.image}`}/>
+                       <img
+  className="w-32 h-32 mx-auto rounded-full object-cover border mb-4"
+  src={`https://doctor-appointment-mern-xqjc.onrender.com/uploads/${doc?.image}`}
+  alt={doc?.name || "Doctor"}
+/>
 
                         <h3 className="text-xl font-semibold">{doc?.name}</h3>
 
