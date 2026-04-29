@@ -27,7 +27,7 @@ function AllDoctors() {
                         <Link to={`/doctor/${doc._id}`}>
                         <img
   className="w-32 h-32 mx-auto rounded-full object-cover border mb-4"
-  src={`/img/doctors/uploads/${doc?.image}`}
+  src={`/img/doctors/${doc?.image}`}
   alt={doc?.name || "Doctor"}
 />
                         <h3 className="text-xl font-semibold">{doc?.name}</h3>
