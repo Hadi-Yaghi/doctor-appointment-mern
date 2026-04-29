@@ -77,7 +77,7 @@ function AddDoctor() {
         <div className="flex flex-col items-center w-1/3">
           <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-300">
             {preview ? (
-              <img src={preview} className="object-cover w-full h-full" />
+              <img src={preview} className="object-cover w-full h-full" alt="Default doctor avatar"/>
             ) : (
               <img src="./img/doctors/avatar.png" alt="Default avatar" />
             )}

@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react'
+
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
@@ -25,8 +25,11 @@ function AllDoctors() {
                 {doctors?.map((doc)=>(
                     <div className="bg-white rounded-lg shadow p-4 text-center" key={doc?._id}>
                         <Link to={`/doctor/${doc._id}`}>
-                        <img  className="w-32 h-32 mx-auto rounded-full object-cover border mb-4" src={`https://doctor-appointment-mern-xqjc.onrender.com/uploads/${doc?.image}`}/>
-
+                        <img
+  className="w-32 h-32 mx-auto rounded-full object-cover border mb-4"
+  src={`https://doctor-appointment-mern-xqjc.onrender.com/uploads/${doc?.image}`}
+  alt={doc?.name || "Doctor"}
+/>
                         <h3 className="text-xl font-semibold">{doc?.name}</h3>
 
                        <p className="text-gray-600">{doc.specialty}</p>
