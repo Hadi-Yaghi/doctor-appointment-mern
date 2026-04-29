@@ -40,7 +40,7 @@ function AddDoctor() {
       formData.append("description", form.description);
       if (form.image) formData.append("image", form.image);
 
-      const res = await fetch("http://localhost:5000/doctors/addDoctors", {
+      const res = await fetch("https://doctor-appointment-mern-xqjc.onrender.com/doctors/addDoctors", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

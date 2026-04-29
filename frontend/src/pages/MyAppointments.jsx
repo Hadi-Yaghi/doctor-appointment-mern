@@ -31,7 +31,7 @@ function MyAppointments() {
         console.log("User from context:", user);
 
         // Make fetch request
-        const url = "http://localhost:5000/appointments/myAppointments";
+        const url = "https://doctor-appointment-mern-xqjc.onrender.com/appointments/myAppointments";
         console.log("Fetching from:", url);
 
         const res = await fetch(url, {
@@ -77,7 +77,7 @@ function MyAppointments() {
       console.log("Deleting appointment:", id);
 
       const res = await fetch(
-        `http://localhost:5000/appointments/deleteAppointment/${id}`,
+        `https://doctor-appointment-mern-xqjc.onrender.com/appointments/deleteAppointment/${id}`,
         {
           method: "POST",
           headers: {
@@ -155,7 +155,7 @@ function MyAppointments() {
                   className="w-20 h-20 rounded-full object-cover border-2 border-[#008e9b]"
                   src={
                     app?.doctor?.image
-                      ? `http://localhost:5000/uploads/${app.doctor.image}`
+                      ? `https://doctor-appointment-mern-xqjc.onrender.com/uploads/${app.doctor.image}`
                       : "./img/doctors/avatar.png"
                   }
                   onError={(e) => {

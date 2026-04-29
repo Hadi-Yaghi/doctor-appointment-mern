@@ -15,7 +15,7 @@ function AddDepartment() {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/departments/addDepartment", {
+      const res = await fetch("https://doctor-appointment-mern-xqjc.onrender.com/departments/addDepartment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
