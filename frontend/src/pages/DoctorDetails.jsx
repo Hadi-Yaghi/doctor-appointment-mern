@@ -44,7 +44,7 @@ function DoctorDetails() {
         <div className='md:col-span-2 flex flex-col md:flex-row items-center'>
 
             <img 
-                src={`https://doctor-appointment-mern-xqjc.onrender.com/uploads/${doctor?.image}`} 
+                src={`/img/doctors/uploads/${doctor?.image}`} 
                 alt={doctor?.name || "Doctor"}
                 className='w-64 h-64 object-cover rounded-lg shadow-md mb-6 md:mb-0 md:mr-10'
             />
@@ -66,7 +66,7 @@ function DoctorDetails() {
                         <Link className="flex items-center bg-white rounded-lg shadow p-3" key={doc?._id} to={`/doctor/${doc?._id}`}>
                             <img  
                                 className="w-16 h-16 rounded-full object-cover border mr-4" 
-                                src={`https://doctor-appointment-mern-xqjc.onrender.com/uploads/${doc?.image}`}
+                                src={`/img/doctors/uploads/${doc?.image}`}
                                 alt={doc?.name || "Related doctor"}
                             />
                             <div>
